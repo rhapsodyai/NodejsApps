@@ -1,3 +1,4 @@
+"use strict";
 const events = require('events'), util = require('util'),
 
 //client constructor
@@ -16,3 +17,10 @@ LDJClient = function(stream) {
 	});
 };
 
+util.inherits(LDJClient, events.EventEmitter);
+
+//expose module methods
+exports.LDJClient = LDJClient;
+exports.connect = function(stream) {
+	return new LDJClient(stream);
+};
