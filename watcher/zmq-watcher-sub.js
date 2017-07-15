@@ -1,3 +1,5 @@
+//run with node --harmony zmq-watcher-sub.js
+
 "use strict";
 const zmq = require('zmq'),
 
@@ -9,7 +11,7 @@ subscriber.subscribe("");
 
 //handle messages from publisher
 subscriber.on("message", function(data) {
-	let message = JSON.parse(data).
+	let message = JSON.parse(data),
 	date = new Date(message.timestamp);
 	console.log("File '" + message.file + "' changed at " + date);
 });
