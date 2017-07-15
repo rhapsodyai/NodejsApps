@@ -1,3 +1,5 @@
+//run with node --harmony zmq-watcher-pub.js target.txt
+
 'use strict';
 const fs = require('fs'), zmq = require('zmq'),
 
