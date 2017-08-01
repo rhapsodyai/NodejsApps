@@ -1,3 +1,5 @@
+// run with node --harmony -e   'require("./lib/rdf-parser.js")("cache/epub/132/pg132.rdf", console.log)'
+
 'use strict';
 const
 	fs = require('fs'),
