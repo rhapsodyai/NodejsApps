@@ -2,7 +2,7 @@
 
 'use strict';
 const
-  request = require('request'),
+	request = require('request'),
 	async = require('async'),
 	file = require('file'),
 	rdfParser = require('./lib/rdf-parser.js'),
