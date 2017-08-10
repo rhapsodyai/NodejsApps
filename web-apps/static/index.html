@@ -15,5 +15,33 @@
 	<script src="typeahead.js/dist/typeahead.min.js"></script>
 	<script src="handlebars/handlebars.js"></script>
 	<script src="app.js"></script>
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Bundle Name</th>
+			<th class="actions">Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each bundles}}
+		<tr data-id="{{@key}}">
+		<td class="actions">
+			<button type="button" class="btn edit">
+				<abbr title="edit bundle" class="glyphicon glyphicon-pencil">
+					<span>edit bundle</span>
+				</abbr>
+			</button>
+			<button type="button" class="btn delete">
+				<abbr title="delete bundle" class="glyphicon glyphicon-trash">
+					<span>delete bundle</span>
+				</abbr>
+			</button>
+		</td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>
 </body>
 </html>

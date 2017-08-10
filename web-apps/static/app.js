@@ -41,7 +41,7 @@ saveBundles = function(bundles, callback) {
 		type: 'PUT',
 		url: '/api/user/bundles',
 		data: JSON.stringify(bundles),
-		contentType: 'application/json; charset=utf-8",
+		contentType: 'application/json; charset=utf-8',
 		accepts: 'application/json'
 	}).then(function(data, status, xhr) {
 		callback(null, data);
