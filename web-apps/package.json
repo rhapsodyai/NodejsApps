@@ -7,13 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node --harmony ./server.js"
   },
-  "author": "",
+  "author": "Melissa Auclaire <rhapsody.ai [at] gmail>",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.6.5",
     "connect-redis": "^3.3.0",
     "cookie-parser": "^1.4.3",
     "express": "^4.15.3",
+    "express-session": "^1.7.6",
     "morgan": "^1.8.2",
+    "npmlog": "^0.1.1",
     "passport": "^0.3.2",
     "passport-google": "^0.3.0",
     "q": "^1.5.0",
