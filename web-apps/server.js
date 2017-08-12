@@ -8,14 +8,14 @@ const
 	bodyParser = require('body-parser'),
 	request = require('request'),
 	redisClient = require('redis').createClient(),
-	RedisStore = require('connect-redis')(express),
+	RedisStore = require('connect-redis')(session),
 	passport = require('passport'),
 	GoogleStrategy = require('passport-google').Strategy,
 	log = require('npmlog'),
 	app = express();
 
 redisClient
-	.on('ready', function() { log/info('REDIS', 'ready'); })
+	.on('ready', function() { log.info('REDIS', 'ready'); })
 	.on('error', function() { log.error('REDIS', err.message); });
 
 passport.serializeUser(function(user, done) {
